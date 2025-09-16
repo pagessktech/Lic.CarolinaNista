@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <!-- Preload de la imagen principal para mejorar LCP (Largest Contentful Paint) -->
     <!-- Reemplazar 'hero-avatar.webp' por la ruta final de la imagen -->
-    <link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758042883/Captura_de_pantalla_2025-09-16_141426_h0s1rp.png" type="image/png">
+    <link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758042883/Captura_de_pantalla_2025-09-16_141426_h_s1rp.png" type="image/png">
 
     <!-- ============== ESTILOS (CSS INLINE) ============== -->
     <!-- Para producción, se recomienda extraer este bloque a un archivo style.css -->
@@ -49,13 +49,13 @@
         /* VARIABLES Y RESET   */
         /* ------------------- */
         :root {
-            --color-bg: #FEF9FD; /* Light Lilac Background */
-            --color-text: #4C4B63; /* Muted Purple-Gray */
-            --color-headings: #2934A3; /* Dark Blue */
-            --color-primary: #8A89C1; /* Periwinkle */
-            --color-secondary: #E5B6D5; /* Light Pink */
-            --color-cta: #E661B2; /* Fuchsia Pink */
-            --color-accent: #2934A3; /* Dark Blue for accents */
+            --color-bg: #FEFCFF; /* Very Light Lavender Background */
+            --color-text: #5E5A72; /* Dark Muted Purple for Text */
+            --color-headings: #D94A8D; /* Vibrant Pink for Headings */
+            --color-primary: #B5A2E1; /* Lavender */
+            --color-secondary: #DCE284; /* Lime Green */
+            --color-cta: #DE5D9C; /* Vibrant Pink for CTA */
+            --color-accent: #DCE284; /* Lime Green - AHORA ES EL ACENTO PRINCIPAL */
             
             --font-headings: 'Poppins', sans-serif;
             --font-body: 'Inter', sans-serif;
@@ -63,7 +63,7 @@
             --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
             --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -4px rgba(0,0,0,0.05);
             --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
-            --shadow-ring: 0 0 0 3px rgba(230, 97, 178, 0.3);
+            --shadow-ring: 0 0 0 3px rgba(222, 93, 156, 0.3);
 
             --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -156,8 +156,8 @@
         .spinner {
             width: 50px;
             height: 50px;
-            border: 5px solid rgba(41, 52, 163, 0.2);
-            border-top-color: var(--color-accent);
+            border: 5px solid rgba(222, 93, 156, 0.2);
+            border-top-color: var(--color-cta);
             border-radius: 50%;
             animation: spin 1s ease-in-out infinite;
         }
@@ -189,8 +189,8 @@
 
         .btn-cta:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(230, 97, 178, 0.4);
-            background-color: #d958a3;
+            box-shadow: 0 10px 20px rgba(222, 93, 156, 0.4);
+            background-color: #d94a8d;
         }
         
         .btn-secondary {
@@ -202,6 +202,7 @@
         .btn-secondary:hover {
             background-color: var(--color-secondary);
             border-color: var(--color-secondary);
+            color: #5E5A72;
         }
 
         .section-title {
@@ -210,7 +211,7 @@
         }
 
         .section-title span {
-            color: var(--color-cta);
+            color: var(--color-accent);
         }
         
         /* ------------------- */
@@ -227,7 +228,7 @@
         }
         
         .main-header.scrolled {
-            background-color: rgba(254, 249, 253, 0.8);
+            background-color: rgba(254, 252, 255, 0.8);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             box-shadow: var(--shadow-md);
@@ -248,7 +249,7 @@
         }
         
         .logo span {
-            color: var(--color-cta);
+            color: var(--color-accent);
         }
         
         .main-nav ul {
@@ -329,6 +330,7 @@
         
         .hero-text h1 {
             margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
         
         .hero-text .subtitle {
@@ -389,7 +391,7 @@
             background-color: #FFFFFF;
             padding: 2rem;
             border-radius: 1rem;
-            border: 1px solid #F0E4ED;
+            border: 1px solid #F5EEF3;
             transition: var(--transition-fast);
             opacity: 0;
             transform: translateY(50px);
@@ -398,14 +400,14 @@
         .service-card:hover {
             transform: translateY(-10px) scale(1.03);
             box-shadow: var(--shadow-lg);
-            border-color: var(--color-secondary);
+            border-color: var(--color-primary);
         }
 
         .service-card .icon {
             width: 50px;
             height: 50px;
             margin-bottom: 1rem;
-            color: var(--color-cta);
+            color: var(--color-accent);
         }
 
 
@@ -413,7 +415,7 @@
         /* BENEFITS SECTION    */
         /* ------------------- */
         #benefits {
-            background-color: #F8F0F6;
+            background-color: #F8F9E9; /* Tono amarillo pastel para el fondo */
         }
         .benefits-grid {
             display: grid;
@@ -439,7 +441,7 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
-            box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-secondary);
+            box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-primary);
             transition: var(--transition-fast);
             animation: gentle-rotate 15s linear infinite;
         }
@@ -524,7 +526,7 @@
 
         .slider-btn {
             background: none;
-            border: 2px solid var(--color-secondary);
+            border: 2px solid var(--color-secondary); /* Borde amarillo para los botones */
             color: var(--color-text);
             width: 40px;
             height: 40px;
@@ -570,7 +572,7 @@
         .workshop-card {
             background-color: #FFFFFF;
             border-radius: 1rem;
-            border: 1px solid #F0E4ED;
+            border: 1px solid #F5EEF3;
             overflow: hidden;
             transition: var(--transition-fast);
             opacity: 0;
@@ -617,7 +619,7 @@
         }
 
         .faq-item {
-            border: 1px solid #F0E4ED;
+            border: 1px solid #F5EEF3;
             border-radius: 0.5rem;
             overflow: hidden;
             background-color: #FFFFFF;
@@ -654,7 +656,7 @@
 
         .faq-item > div {
             padding: 0 1.5rem 1.5rem;
-            border-top: 1px solid #F0E4ED;
+            border-top: 1px solid #F5EEF3;
         }
         
         /* ------------------- */
@@ -679,7 +681,7 @@
             gap: 1rem;
         }
         .contact-info svg {
-            color: var(--color-cta);
+            color: var(--color-accent);
         }
 
         #contact-form input,
@@ -688,7 +690,7 @@
             padding: 0.8rem;
             margin-bottom: 1rem;
             border-radius: 0.5rem;
-            border: 1px solid #E5B6D5;
+            border: 1px solid var(--color-primary);
             background-color: #FFFFFF;
             color: var(--color-text);
         }
@@ -723,7 +725,7 @@
         .main-footer {
             padding: 2rem 0;
             text-align: center;
-            border-top: 1px solid #F0E4ED;
+            border-top: 1px solid #F5EEF3;
         }
 
         /* ------------------- */
@@ -779,11 +781,11 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(254, 249, 253, 0.8);
+            background-color: rgba(254, 252, 255, 0.8);
             backdrop-filter: blur(5px);
             padding: 1rem;
             z-index: 999;
-            border-top: 1px solid #F0E4ED;
+            border-top: 1px solid #F5EEF3;
         }
 
         .mobile-sticky-cta .btn {
@@ -1433,6 +1435,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 
