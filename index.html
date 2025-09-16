@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <!-- ============== CONFIGURACIÓN BÁSICA ============== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Carolina Nista — Psicóloga en San Fernando y Online</title>
+    
+    <!-- ============== SEO & METADATOS (EDITABLES) ============== -->
+    <!-- Consejo: Usar https://metatags.io/ para generar y previsualizar estos tags -->
+    <meta name="description" content="Terapia psicológica con enfoque integrador para adolescentes y adultos. Atención presencial en San Fernando y sesiones online. Talleres y cursos de desarrollo personal.">
+    <meta name="keywords" content="psicologa, san fernando, terapia online, psicologia, carolina nista, ansiedad, depresion, estres">
+    <meta name="author" content="Lic. Carolina Nista">
+    <link rel="canonical" href="https://www.carolinanista-psicologa.com.ar"> <!-- Reemplazar con el dominio final -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.carolinanista-psicologa.com.ar"> <!-- Reemplazar con el dominio final -->
+    <meta property="og:title" content="Lic. Carolina Nista — Psicóloga en San Fernando y Online">
+    <meta property="og:description" content="Terapia psicológica con enfoque integrador. Atención presencial en San Fernando y sesiones online.">
+    <meta property="og:image" content="https://www.carolinanista-psicologa.com.ar/assets/og-image.jpg"> <!-- URL absoluta de la imagen para compartir -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.carolinanista-psicologa.com.ar"> <!-- Reemplazar con el dominio final -->
+    <meta property="twitter:title" content="Lic. Carolina Nista — Psicóloga en San Fernando y Online">
+    <meta property="twitter:description" content="Terapia psicológica con enfoque integrador. Atención presencial en San Fernando y sesiones online.">
+    <meta property="twitter:image" content="https://www.carolinanista-psicologa.com.ar/assets/og-image.jpg"> <!-- URL absoluta de la imagen para compartir -->
+
+    <!-- JSON-LD para Rich Snippets -->
+    <script type="application/ld+json" id="json-ld-data">
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    
+    <!-- ============== PRELOADS & FUENTES ============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <!-- Preload de la imagen principal para mejorar LCP (Largest Contentful Paint) -->
+    <!-- Reemplazar 'hero-avatar.webp' por la ruta final de la imagen -->
+    <link rel="preload" fetchpriority="high" as="image" href="./assets/hero-avatar.webp" type="image/webp">
+
+    <!-- ============== ESTILOS (CSS INLINE) ============== -->
+    <!-- Para producción, se recomienda extraer este bloque a un archivo style.css -->
+    <style>
+        /* ------------------- */
+        /* VARIABLES Y RESET   */
+        /* ------------------- */
+        :root {
+            --color-dark: #0A0A0A;
+            --color-light: #F5F5F7;
+            --color-primary-start: #0A4CFF;
+            --color-primary-end: #2BC4FF;
+            --color-cta: #6B46FF;
+            --color-accent: #00C7A7;
+            --color-text-dark: #CCCCCC;
+            --color-text-headings: #FFFFFF;
+
+            --font-headings: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.2), 0 8px 10px -6px rgba(0,0,0,0.2);
+            --shadow-ring: 0 0 0 3px rgba(107, 70, 255, 0.3);
+
+            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Offset for fixed header */
+        }
+
+        body {
+            background-color: var(--color-dark);
+            color: var(--color-text-dark);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-headings);
+            color: var(--color-text-headings);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); }
+        h3 { font-size: 1.5rem; }
+
+        p { margin-bottom: 1rem; }
+        a { color: var(--color-accent); text-decoration: none; transition: var(--transition-fast); }
+        a:hover { color: var(--color-primary-end); }
+
+        img, svg, video { max-width: 100%; height: auto; display: block; }
+        
+        .container {
+            max-width: 1100px;
+            margin-inline: auto;
+            padding-inline: 1.5rem;
+        }
+
+        section {
+            padding-block: clamp(3rem, 8vw, 6rem);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--color-cta);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ------------------- */
+        /* PRELOADER           */
+        /* ------------------- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-dark);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            visibility: visible;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top-color: var(--color-accent);
+            border-radius: 50%;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+
+        /* ------------------- */
+        /* BOTONES Y COMPONENTES */
+        /* ------------------- */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-align: center;
+            font-family: var(--font-headings);
+            transition: var(--transition-fast);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-cta {
+            background-color: var(--color-cta);
+            color: white;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(107, 70, 255, 0.3);
+            background-color: #7a5bff;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-text-headings);
+            border-color: var(--color-text-dark);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-color: var(--color-text-headings);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title span {
+            color: var(--color-accent);
+        }
+        
+        /* ------------------- */
+        /* HEADER              */
+        /* ------------------- */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease, padding 0.3s ease;
+        }
+        
+        .main-header.scrolled {
+            background-color: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-md);
+            padding: 0.5rem 0;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--font-headings);
+            font-size: 1.5rem;
+            color: var(--color-text-headings);
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--color-primary-end);
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            color: var(--color-text-dark);
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-accent);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .main-nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001; /* Para que esté sobre el menú desplegable */
+        }
+
+
+        /* ------------------- */
+        /* HERO SECTION        */
+        /* ------------------- */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(240deg, var(--color-primary-start), var(--color-dark) 60%);
+            animation: gradient-animation 20s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .hero-text h1 {
+            margin-bottom: 1rem;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 50ch;
+        }
+        
+        .hero-image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-avatar {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-lg);
+        }
+
+
+        /* ------------------- */
+        /* ABOUT SECTION       */
+        /* ------------------- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about-image img, .about-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* ------------------- */
+        /* SERVICES SECTION    */
+        /* ------------------- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: #1A1A1A;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid #2a2a2a;
+            transition: var(--transition-fast);
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-accent);
+        }
+
+        .service-card .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+
+        /* ------------------- */
+        /* BENEFITS SECTION    */
+        /* ------------------- */
+        #benefits {
+            background-color: #111;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+
+        .benefit-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .benefit-icon-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--color-primary-start), var(--color-primary-end));
+            box-shadow: 0 0 0 4px #0A0A0A, 0 0 0 6px var(--color-cta);
+            transition: var(--transition-fast);
+            animation: gentle-rotate 15s linear infinite;
+        }
+        
+        @keyframes gentle-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .benefit-item:hover .benefit-icon-wrapper {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 4px #0A0A0A, 0 0 0 6px var(--color-accent), var(--shadow-lg);
+            animation-play-state: paused;
+        }
+
+        .benefit-icon-wrapper svg {
+            width: 50px;
+            height: 50px;
+            color: white;
+        }
+        
+        .benefit-item h4 {
+            font-size: 1.1rem;
+        }
+
+        /* ------------------- */
+        /* BOOKING CTA         */
+        /* ------------------- */
+        #booking {
+            text-align: center;
+        }
+        #booking .container {
+            background: linear-gradient(90deg, var(--color-cta), var(--color-primary-start));
+            padding: 4rem 2rem;
+            border-radius: 1rem;
+        }
+        #booking h2 {
+            margin-bottom: 1.5rem;
+        }
+
+
+        /* ------------------- */
+        /* TESTIMONIALS        */
+        /* ------------------- */
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .testimonial {
+            flex: 0 0 100%;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .testimonial blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--color-accent);
+        }
+
+        .slider-controls {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .slider-btn {
+            background: none;
+            border: 2px solid var(--color-text-dark);
+            color: var(--color-text-dark);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: var(--transition-fast);
+        }
+
+        .slider-btn:hover {
+            background-color: var(--color-cta);
+            border-color: var(--color-cta);
+            color: white;
+        }
+
+        /* ------------------- */
+        /* WORKSHOPS           */
+        /* ------------------- */
+        .workshop-slider-wrapper {
+            position: relative;
+            max-width: 90%;
+            margin: auto;
+        }
+        .workshop-slider {
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .workshop-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .workshop-slide {
+            flex: 0 0 100%;
+            padding: 0.5rem;
+            box-sizing: border-box;
+        }
+        .workshop-controls {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .workshop-card {
+            background-color: #1A1A1A;
+            border-radius: 1rem;
+            border: 1px solid #2a2a2a;
+            overflow: hidden;
+            transition: var(--transition-fast);
+            opacity: 0;
+            transform: translateY(50px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .workshop-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .workshop-image {
+            height: 200px;
+            background-color: #333; /* Placeholder */
+        }
+
+        .workshop-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .workshop-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .workshop-content .btn {
+            margin-top: auto;
+        }
+
+        /* ------------------- */
+        /* FAQ                 */
+        /* ------------------- */
+        .faq-container {
+            max-width: 750px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 1px solid #2a2a2a;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none; /* Hide default arrow */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item[open] summary {
+            color: var(--color-accent);
+        }
+        
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-item > div {
+            padding: 0 1.5rem 1.5rem;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        /* ------------------- */
+        /* CONTACTO            */
+        /* ------------------- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .contact-info ul {
+            list-style: none;
+            margin-block: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .contact-info svg {
+            color: var(--color-accent);
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #333;
+            background-color: #1A1A1A;
+            color: var(--color-light);
+        }
+        
+        #contact-form input:focus,
+        #contact-form textarea:focus {
+            outline: none;
+            box-shadow: var(--shadow-ring);
+        }
+        
+        #form-feedback {
+            margin-top: 1rem;
+            color: var(--color-accent);
+        }
+        
+        .map-container {
+            border-radius: 1rem;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+        /* ------------------- */
+        /* FOOTER              */
+        /* ------------------- */
+        .main-footer {
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        /* ------------------- */
+        /* FLOATING SOCIAL BAR */
+        /* ------------------- */
+        .floating-social-bar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-fast);
+            color: white;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .social-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+        
+        .social-whatsapp {
+            background-color: #25D366;
+        }
+
+        .social-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+
+        /* ------------------- */
+        /* MOBILE STICKY CTA   */
+        /* ------------------- */
+        .mobile-sticky-cta {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+            z-index: 999;
+        }
+
+        .mobile-sticky-cta .btn {
+            width: 100%;
+        }
+
+
+        /* ------------------- */
+        /* RESPONSIVE DESIGN   */
+        /* ------------------- */
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+
+            .main-nav {
+                display: flex; /* Anular display: none para que la animación funcione */
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background-color: #111;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                z-index: 1000;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+            }
+            .main-nav.is-active {
+                transform: translateX(0);
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 2.5rem;
+                text-align: center;
+            }
+            .main-nav a {
+                font-size: 1.5rem;
+            }
+
+            .mobile-menu-toggle { display: block; }
+
+            #hero {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-block: 8rem 4rem;
+                min-height: 0;
+                height: auto;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            .hero-image-wrapper { order: -1; margin-bottom: 2rem; }
+            .hero-text .subtitle { margin-inline: auto; }
+            
+            .hero-avatar {
+                width: 280px;
+                height: 280px;
+            }
+
+            .mobile-sticky-cta { display: block; }
+            .header-cta { display: none; }
+            
+            .floating-social-bar {
+                /* Ocultar en móvil para no sobrecargar la UI */
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            .container { padding-inline: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- ============== PRELOADER ============== -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- ============== HEADER ============== -->
+    <header class="main-header" id="main-header">
+        <div class="container">
+            <a href="#" class="logo">CN<span>.</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#workshops">Talleres</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn btn-cta header-cta data-whatsapp-link" target="_blank" rel="noopener noreferrer">Pedir Turno</a>
+            <button class="mobile-menu-toggle" aria-label="Abrir menú">☰</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ============== HERO ============== -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="data-hero-title"></h1>
+                        <p class="subtitle data-hero-subtitle"></p>
+                        <a href="#" class="btn btn-cta data-whatsapp-link" target="_blank" rel="noopener noreferrer">Pedir Turno</a>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758042883/Captura_de_pantalla_2025-09-16_141426_h0s1rp.png" alt="Lic. Carolina Nista" class="hero-avatar">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== SOBRE MÍ ============== -->
+        <section id="about">
+            <div class="container">
+                 <div class="about-grid">
+                    <div class="about-image">
+                        <video 
+                            src="https://res.cloudinary.com/dgyjeotoa/video/upload/v1758041375/mp4_zrsldu.mp4" 
+                            autoplay loop muted playsinline>
+                        </video>
+                    </div>
+                    <div class="about-text">
+                        <h2>Un espacio de escucha y crecimiento <span>para vos</span></h2>
+                        <p>Hola, soy Carolina Nista, Licenciada en Psicología. Mi enfoque es integrador, combinando herramientas de distintas corrientes para adaptarme a tus necesidades únicas. Creo en la terapia como un proceso colaborativo, donde juntos construimos un camino hacia tu bienestar.</p>
+                        <p>Mi objetivo es brindarte un espacio seguro y confidencial para que puedas explorar tus pensamientos, emociones y encontrar nuevas formas de afrontar los desafíos de la vida.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== SERVICIOS ============== -->
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">¿Cómo puedo <span>ayudarte?</span></h2>
+                <div class="services-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="service-card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        <h3>Tratamiento de la Ansiedad</h3>
+                        <p>Aprendé a manejar la preocupación excesiva, los ataques de pánico y el estrés a través de técnicas efectivas y personalizadas.</p>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="service-card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 16s-1.5-2-4-2-4 2-4 2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                        <h3>Depresión y estado de ánimo</h3>
+                        <p>Un espacio para procesar la tristeza, recuperar la motivación y encontrar un nuevo sentido en tu día a día.</p>
+                    </div>
+                    <!-- Tarjeta 3 -->
+                    <div class="service-card">
+                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"></path><path d="M16.5 18.4a9 9 0 1 0-9-9 9 9 0 0 0 9 9Z"></path><path d="M12 12a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path></svg>
+                        <h3>Talleres y Cursos</h3>
+                        <p>Participá en espacios grupales para desarrollar habilidades de comunicación, mindfulness y crecimiento personal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== BENEFICIOS DESTACADOS ============== -->
+        <section id="benefits">
+            <div class="container">
+                <div class="benefits-grid">
+                    <!-- Beneficio 1 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon-wrapper">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13H2a10 10 0 0 0 10 10zM22 4a10 10 0 0 0-10-10H2a10 10 0 0 0 10 10zM13 4a7 7 0 0 1 7 7h2a10 10 0 0 0-10-10z"></path></svg>
+                        </div>
+                        <h4>Enfoque Integrador</h4>
+                    </div>
+                    <!-- Beneficio 2 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon-wrapper">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"></path><path d="M12 12v-4"></path><path d="M12 16h.01"></path></svg>
+                        </div>
+                        <h4>Terapia Online</h4>
+                    </div>
+                    <!-- Beneficio 3 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon-wrapper">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h.01"></path><path d="M12 6.5h.01"></path><path d="M17.5 12h.01"></path><path d="M6.5 12h.01"></path><path d="M12 17.5h.01"></path></svg>
+                        </div>
+                        <h4>Atención Personalizada</h4>
+                    </div>
+                    <!-- Beneficio 4 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon-wrapper">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <h4>Espacio Confidencial</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== CTA RESERVAR TURNO ============== -->
+        <section id="booking">
+            <div class="container">
+                <h2>¿Listo para empezar tu proceso de cambio?</h2>
+                <p>El primer paso es el más importante. Hacé clic para reservar tu turno y empecemos a trabajar juntos.</p>
+                <a href="#" class="btn btn-cta data-whatsapp-link" target="_blank" rel="noopener noreferrer">Pedir Turno por WhatsApp</a>
+            </div>
+        </section>
+
+        <!-- ============== TESTIMONIOS ============== -->
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">Qué dicen <span>quienes confían</span></h2>
+                 <div class="testimonial-slider">
+                    <div class="testimonial-track">
+                        <!-- Testimonio 1 -->
+                        <div class="testimonial">
+                            <blockquote>"Carolina me ayudó a entender mis ataques de pánico y me dio herramientas que uso todos los días. La terapia online fue súper cómoda para mí."</blockquote>
+                            <cite class="testimonial-author">- A.G.</cite>
+                        </div>
+                        <!-- Testimonio 2 -->
+                        <div class="testimonial">
+                            <blockquote>"Encontré un espacio de mucha calidez y profesionalismo. Pude procesar cosas que venía arrastrando hace mucho tiempo. Súper recomendable."</blockquote>
+                            <cite class="testimonial-author">- M.F.</cite>
+                        </div>
+                        <!-- Testimonio 3 -->
+                        <div class="testimonial">
+                            <blockquote>"Gracias a las sesiones, mejoré mucho la comunicación con mi familia y mi pareja. Me siento con más confianza para expresar lo que necesito."</blockquote>
+                            <cite class="testimonial-author">- J.P.</cite>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" aria-label="Testimonio anterior">&#8249;</button>
+                    <button class="slider-btn next-btn" aria-label="Testimonio siguiente">&#8250;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== TALLERES Y CURSOS ============== -->
+        <section id="workshops">
+             <div class="container">
+                <h2 class="section-title">Talleres y <span>cursos</span></h2>
+                <div class="workshop-slider-wrapper">
+                    <div class="workshop-slider">
+                        <div class="workshop-track">
+                            <!-- Slide 1 -->
+                            <div class="workshop-slide">
+                                <div class="workshop-card">
+                                    <div class="workshop-image"></div> <!-- Reemplazar con <img/> -->
+                                    <div class="workshop-content">
+                                        <h3>Gestión del Estrés y Mindfulness</h3>
+                                        <p>Un taller práctico para incorporar técnicas de atención plena en tu día a día.</p>
+                                        <a href="#" class="btn btn-secondary">Más información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="workshop-slide">
+                                <div class="workshop-card">
+                                    <div class="workshop-image"></div> <!-- Reemplazar con <img/> -->
+                                    <div class="workshop-content">
+                                        <h3>Comunicación Asertiva</h3>
+                                        <p>Aprendé a expresar tus ideas y necesidades de forma clara y respetuosa.</p>
+                                        <a href="#" class="btn btn-secondary">Próximamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 (Ejemplo adicional) -->
+                             <div class="workshop-slide">
+                                <div class="workshop-card">
+                                    <div class="workshop-image"></div> <!-- Reemplazar con <img/> -->
+                                    <div class="workshop-content">
+                                        <h3>Herramientas para la Autoestima</h3>
+                                        <p>Descubrí y potenciá tu valor personal para construir relaciones más sanas.</p>
+                                        <a href="#" class="btn btn-secondary">Próximamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls workshop-controls">
+                        <button class="slider-btn workshop-prev-btn" aria-label="Taller anterior">&#8249;</button>
+                        <button class="slider-btn workshop-next-btn" aria-label="Taller siguiente">&#8250;</button>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- ============== PREGUNTAS FRECUENTES ============== -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title">Preguntas <span>frecuentes</span></h2>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary>¿Cómo es la primera sesión?</summary>
+                        <div><p>La primera sesión es una oportunidad para conocernos. Hablaremos sobre lo que te trae a terapia, tus expectativas y cómo puedo ayudarte. Es un espacio para que puedas resolver todas tus dudas sin compromiso.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cuál es la diferencia entre terapia online y presencial?</summary>
+                        <div><p>La efectividad es la misma. La terapia online ofrece mayor flexibilidad y comodidad, mientras que la presencial brinda el espacio físico del consultorio. La elección depende de tus preferencias y necesidades personales.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cuánto dura el tratamiento?</summary>
+                        <div><p>La duración es variable y depende de cada caso. Trabajaremos juntos para establecer objetivos claros, y la duración del proceso se ajustará a tu ritmo y al logro de esas metas. Mi objetivo es darte herramientas para que puedas continuar tu camino de forma autónoma.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Hay confidencialidad?</summary>
+                        <div><p>Absolutamente. Todo lo que se habla en sesión está protegido por el secreto profesional, creando un ambiente de total confianza y seguridad, tanto en modalidad online como presencial.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============== CONTACTO Y MAPA ============== -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto y <span>ubicación</span></h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Iniciá tu proceso hoy</h3>
+                        <p>Podés contactarme por WhatsApp para una respuesta más rápida, o usar el formulario. ¡Espero tu mensaje!</p>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.98z"></path></svg>
+                                <a href="#" class="data-phone-href" id="contact-phone"></a>
+                            </li>
+                             <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span id="contact-address"></span>
+                            </li>
+                        </ul>
+                         <!-- Formulario opcional -->
+                        <form id="contact-form">
+                            <input type="text" name="name" placeholder="Tu nombre" required>
+                            <input type="email" name="email" placeholder="Tu email" required>
+                            <textarea name="message" rows="4" placeholder="Tu mensaje..." required></textarea>
+                            <button type="submit" class="btn btn-cta">Enviar Mensaje</button>
+                            <div id="form-feedback"></div>
+                        </form>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.431268393527!2d-58.56323758477418!3d-34.46671098049539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1e7e40854c1%3A0x6b42b6479577f83f!2sSarmiento%201194%2C%20B1646%20San%20Fernando%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1668529881881!5m2!1ses-419!2sar" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa de ubicación del consultorio">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ============== FOOTER ============== -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Lic. Carolina Nista. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- ============== MOBILE STICKY CTA ============== -->
+    <div class="mobile-sticky-cta">
+        <a href="#" class="btn btn-cta data-whatsapp-link" target="_blank" rel="noopener noreferrer">Pedir Turno por WhatsApp</a>
+    </div>
+
+    <!-- ============== FLOATING SOCIAL BAR ============== -->
+    <div class="floating-social-bar">
+        <a href="#" class="social-icon social-instagram data-instagram-link" target="_blank" rel="noopener noreferrer" aria-label="Seguime en Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.784.305-1.457.717-2.126 1.384S.935 3.356.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.783.718 1.457 1.384 2.126.667.666 1.343 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.783-.305 1.457-.718 2.126-1.384.666-.667 1.079-1.343 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.305-.784-.718-1.457-1.384-2.126C21.314 1.65 20.64 1.237 19.86.935c-.765-.297-1.636-.5-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.06 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.419-.82.679-1.38.896-.423.164-1.06.36-2.23.413-1.266.057-1.646.07-4.85.07s-3.585-.015-4.85-.07c-1.17-.06-1.805-.249-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.82-896-1.38.164-.423-.36-1.06-.413-2.23-.057-1.266-.07-1.646-.07-4.85s.015-3.585.07-4.85c.06-1.17.25-1.805.413-2.227.217-.562.477-.96.896-1.382.42-.419.82-.679 1.38-.896.423-.164 1.06-.36 2.23-.413C8.415 2.176 8.796 2.16 12 2.16zm0 9.045c-2.404 0-4.356 1.95-4.356 4.355 0 2.404 1.952 4.355 4.356 4.355s4.356-1.95 4.356-4.355c0-2.404-1.952-4.355-4.356-4.355zM12 20c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441c.795 0 1.44-.645 1.44-1.44s-.645-1.44-1.44-1.44z"/></svg>
+        </a>
+        <a href="#" class="social-icon social-whatsapp data-whatsapp-link" target="_blank" rel="noopener noreferrer" aria-label="Contactame por WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12.04 3.6c4.54 0 8.23 3.69 8.23 8.23s-3.69 8.23-8.23 8.23c-1.52 0-2.98-.41-4.28-1.15l-.3-.18-3.18.83.85-3.1-.2-.31c-.82-1.32-1.26-2.83-1.26-4.38 0-4.54 3.69-8.23 8.23-8.23zm-1.8 4.39c-.19-.09-.4-.09-.58.09-.18.18-.7.68-.85.83-.15.15-.3.18-.44.09-.15-.09-1.2-.44-2.28-1.4-.85-.75-1.42-1.68-1.65-1.97-.22-.29-.01-.45.09-.58.09-.1.19-.27.28-.37.09-.1.12-.18.18-.32.05-.15-.02-.28-.09-.37s-.44-1.06-.6-1.45c-.16-.39-.32-.33-.44-.33h-.2c-.15 0-.37.09-.55.28s-.7.68-.7 1.67c0 1 .73 1.94.83 2.08.1.15 1.42 2.18 3.43 3.06 2.01.88 2.01.59 2.37.55.36-.04 1.2-.49 1.37-.96.17-.47.17-.88.12-.96-.05-.08-.18-.13-.37-.22z"/></svg>
+        </a>
+    </div>
+
+    <!-- ============== SCRIPTS ============== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        window.onload = () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('hidden');
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ===================================================
+            // 0. CONFIGURACIÓN DE CONTENIDO EDITABLE
+            // ===================================================
+            const EDITABLE_CONTENT = {
+                heroTitle: "Lic. Carolina Nista — Psicóloga",
+                heroSubtitle: "Atención presencial en San Fernando y terapia online. Enfoque integrador — talleres y cursos.",
+                address: "Sarmiento 1194, San Fernando (B1646)",
+                phone: "011 2155-7093",
+                phoneHref: "tel:+5491121557093",
+                whatsappLink: "https://wa.link/nqnl84",
+                whatsappPhoneNumber: "5491121557093", // Número para el formulario, sin símbolos ni espacios.
+                instagramLink: "https://www.instagram.com/lic.caronista/",
+                jsonLd: {
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "Lic. Carolina Nista - Psicóloga",
+                    "image": "https://www.carolinanista-psicologa.com.ar/assets/hero-avatar.jpg",
+                    "url": "https://www.carolinanista-psicologa.com.ar",
+                    "telephone": "+5491121557093",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Sarmiento 1194",
+                        "addressLocality": "San Fernando",
+                        "postalCode": "B1646",
+                        "addressCountry": "AR"
+                    },
+                    "openingHoursSpecification": [{
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "09:00",
+                        "closes": "20:00"
+                    }]
+                }
+            };
+
+            // ===================================================
+            // 1. INYECTAR CONTENIDO EDITABLE
+            // ===================================================
+            function populateContent() {
+                const content = EDITABLE_CONTENT;
+                
+                document.querySelector('.data-hero-title').textContent = content.heroTitle;
+                document.querySelector('.data-hero-subtitle').textContent = content.heroSubtitle;
+                document.querySelectorAll('.data-whatsapp-link').forEach(el => el.href = content.whatsappLink);
+                
+                const instagramLinkEl = document.querySelector('.data-instagram-link');
+                if (instagramLinkEl) instagramLinkEl.href = content.instagramLink;
+
+                const phoneEl = document.getElementById('contact-phone');
+                if(phoneEl) {
+                    phoneEl.textContent = content.phone;
+                    phoneEl.href = content.phoneHref;
+                }
+                
+                const addressEl = document.getElementById('contact-address');
+                if(addressEl) addressEl.textContent = content.address;
+
+                const jsonLdEl = document.getElementById('json-ld-data');
+                if(jsonLdEl) jsonLdEl.textContent = JSON.stringify(content.jsonLd, null, 2);
+
+                const yearEl = document.getElementById('current-year');
+                if(yearEl) yearEl.textContent = new Date().getFullYear();
+            }
+
+
+            // ===================================================
+            // 2. HEADER CON EFECTO DE SCROLL
+            // ===================================================
+            function handleHeaderScroll() {
+                const header = document.getElementById('main-header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+
+            // ===================================================
+            // 3. SLIDER DE TESTIMONIOS
+            // ===================================================
+            function setupTestimonialSlider() {
+                const track = document.querySelector('.testimonial-track');
+                if (!track) return;
+                const slides = Array.from(track.children);
+                const nextButton = document.querySelector('.next-btn');
+                const prevButton = document.querySelector('.prev-btn');
+                let currentIndex = 0;
+
+                function moveToSlide(index) {
+                    track.style.transform = 'translateX(-' + 100 * index + '%)';
+                    currentIndex = index;
+                }
+
+                nextButton.addEventListener('click', () => {
+                    let nextIndex = currentIndex + 1;
+                    if (nextIndex >= slides.length) nextIndex = 0;
+                    moveToSlide(nextIndex);
+                });
+
+                prevButton.addEventListener('click', () => {
+                    let prevIndex = currentIndex - 1;
+                    if (prevIndex < 0) prevIndex = slides.length - 1;
+                    moveToSlide(prevIndex);
+                });
+            }
+
+            // ===================================================
+            // 4. ANIMACIONES CON GSAP Y SCROLLTRIGGER
+            // ===================================================
+            function initAnimations() {
+                gsap.registerPlugin(ScrollTrigger);
+                
+                const cards = gsap.utils.toArray('.service-card, .workshop-card');
+                cards.forEach(card => {
+                    gsap.to(card, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top 85%',
+                            toggleActions: 'play none none none'
+                        }
+                    });
+                });
+            }
+            
+            // ===================================================
+            // 5. CARGAR ANIMACIÓN LOTTIE (REMOVIDO)
+            // ===================================================
+            // La función para cargar Lottie se ha quitado ya que fue reemplazada por una imagen.
+
+            // ===================================================
+            // 6. SLIDER DE TALLERES
+            // ===================================================
+            function setupWorkshopSlider() {
+                const track = document.querySelector('.workshop-track');
+                if (!track) return;
+                
+                const slides = Array.from(track.children);
+                const nextButton = document.querySelector('.workshop-next-btn');
+                const prevButton = document.querySelector('.workshop-prev-btn');
+                let currentIndex = 0;
+
+                function moveToSlide(index) {
+                    track.style.transform = 'translateX(-' + 100 * index + '%)';
+                    currentIndex = index;
+                }
+
+                nextButton.addEventListener('click', () => {
+                    let nextIndex = currentIndex + 1;
+                    if (nextIndex >= slides.length) nextIndex = 0;
+                    moveToSlide(nextIndex);
+                });
+
+                prevButton.addEventListener('click', () => {
+                    let prevIndex = currentIndex - 1;
+                    if (prevIndex < 0) prevIndex = slides.length - 1;
+                    moveToSlide(prevIndex);
+                });
+            }
+
+            // ===================================================
+            // 7. FORMULARIO DE CONTACTO
+            // ===================================================
+            function handleContactForm() {
+                const form = document.getElementById('contact-form');
+                if (!form) return;
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = this.elements.name.value;
+                    const email = this.elements.email.value;
+                    const message = this.elements.message.value;
+                    
+                    // Construir el mensaje para WhatsApp
+                    const fullMessage = `¡Hola! 👋 Mi nombre es ${name}.\n\nQuería hacer la siguiente consulta:\n\n"${message}"\n\nMi email de contacto es: ${email}`;
+                    
+                    // Codificar el mensaje para la URL
+                    const encodedMessage = encodeURIComponent(fullMessage);
+                    
+                    // Obtener el número de teléfono desde la configuración
+                    const phoneNumber = EDITABLE_CONTENT.whatsappPhoneNumber;
+                    
+                    // Crear la URL de WhatsApp
+                    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+                    
+                    // Abrir WhatsApp en una nueva pestaña
+                    window.open(whatsappURL, '_blank');
+                    
+                    // Limpiar el formulario
+                    form.reset();
+                });
+            }
+            
+            // ===================================================
+            // 8. MENÚ MÓVIL
+            // ===================================================
+            function setupMobileMenu() {
+                const toggleButton = document.querySelector('.mobile-menu-toggle');
+                const nav = document.querySelector('.main-nav');
+
+                if (!toggleButton || !nav) return;
+
+                toggleButton.addEventListener('click', () => {
+                    nav.classList.toggle('is-active');
+                    // Cambiar ícono según el estado del menú
+                    if (nav.classList.contains('is-active')) {
+                        toggleButton.innerHTML = '&times;'; // Ícono de 'X' para cerrar
+                        toggleButton.setAttribute('aria-label', 'Cerrar menú');
+                    } else {
+                        toggleButton.innerHTML = '☰'; // Ícono de hamburguesa
+                        toggleButton.setAttribute('aria-label', 'Abrir menú');
+                    }
+                });
+
+                // Opcional: Cerrar el menú al hacer clic en un enlace
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('is-active');
+                        toggleButton.innerHTML = '☰';
+                        toggleButton.setAttribute('aria-label', 'Abrir menú');
+                    });
+                });
+            }
+            
+            // ===================================================
+            // INICIALIZACIÓN
+            // ===================================================
+            populateContent();
+            window.addEventListener('scroll', handleHeaderScroll);
+            setupTestimonialSlider();
+            setupWorkshopSlider();
+            initAnimations();
+            handleContactForm();
+            setupMobileMenu();
+        });
+    </script>
+</body>
+</html>
+
