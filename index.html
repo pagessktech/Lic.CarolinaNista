@@ -815,13 +815,13 @@
             justify-content: center;
             align-items: center;
             opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            pointer-events: none; /* Cambiado de visibility a pointer-events */
+            transition: opacity 0.3s ease;
         }
 
         .booking-modal.is-active {
             opacity: 1;
-            visibility: visible;
+            pointer-events: auto;
         }
 
         .booking-modal-content {
@@ -834,12 +834,12 @@
             height: 90%;
             max-height: 700px;
             box-shadow: var(--shadow-lg);
-            transform: scale(0.95);
-            transition: transform 0.3s ease;
+            transform: translateY(50px); /* Empieza movido hacia abajo */
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .booking-modal.is-active .booking-modal-content {
-            transform: scale(1);
+            transform: translateY(0); /* Vuelve a su posición original */
         }
 
         .close-modal-btn {
@@ -1522,25 +1522,38 @@
                 if (!modal || openModalButtons.length === 0) return;
 
                 const iframeSrc = "https://agendapro.com/iframe/overview/20fa1b8f-941c-4e6e-b232-ed485bd9b819";
+                let isIframePrepared = false;
+
+                // Esta función crea el iframe. Se llamará una sola vez para precargarlo.
+                const prepareIframe = () => {
+                    if (isIframePrepared) return;
+                    
+                    const iframe = document.createElement('iframe');
+                    iframe.src = iframeSrc;
+                    iframe.title = "Sistema de agendamiento de turnos";
+                    modalBody.appendChild(iframe);
+                    isIframePrepared = true;
+                };
 
                 const openModal = () => {
-                    if (modalBody.innerHTML.trim() === '') {
-                        const iframe = document.createElement('iframe');
-                        iframe.src = iframeSrc;
-                        iframe.title = "Sistema de agendamiento de turnos";
-                        modalBody.appendChild(iframe);
-                    }
+                    // Si el usuario hace clic sin haber pasado el mouse antes, nos aseguramos de que el iframe se cargue.
+                    prepareIframe(); 
                     modal.classList.add('is-active');
-                    document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+                    document.body.style.overflow = 'hidden';
                 };
 
                 const closeModal = () => {
                     modal.classList.remove('is-active');
-                    document.body.style.overflow = ''; // Restaura el scroll del fondo
-                    modalBody.innerHTML = ''; // Elimina el iframe para detenerlo
+                    document.body.style.overflow = '';
+                    // Ya no eliminamos el iframe. Queda en el DOM, listo para la próxima vez que se abra el modal.
                 };
 
                 openModalButtons.forEach(button => {
+                    // Estrategia de PRECARGA: Cuando el usuario pasa el mouse sobre el botón,
+                    // asumimos que tiene la intención de hacer clic y empezamos a cargar el iframe.
+                    // La opción { once: true } asegura que esto solo ocurra una vez.
+                    button.addEventListener('mouseover', prepareIframe, { once: true });
+                    
                     button.addEventListener('click', (e) => {
                         e.preventDefault();
                         openModal();
@@ -1577,7 +1590,6 @@
     </script>
 </body>
 </html>
-
 
 
 
