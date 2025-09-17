@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <!-- Preload de la imagen principal para mejorar LCP (Largest Contentful Paint) -->
     <!-- Reemplazar 'hero-avatar.webp' por la ruta final de la imagen -->
-    <link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758042883/Captura_de_pantalla_2025-09-16_141426_h_s1rp.png" type="image/png">
+    <link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758042883/Captura_de_pantalla_2025-09-16_141426_h0s1rp.png" type="image/png">
 
     <!-- ============== ESTILOS (CSS INLINE) ============== -->
     <!-- Para producción, se recomienda extraer este bloque a un archivo style.css -->
@@ -49,21 +49,23 @@
         /* VARIABLES Y RESET   */
         /* ------------------- */
         :root {
-            --color-bg: #FEFCFF; /* Very Light Lavender Background */
-            --color-text: #5E5A72; /* Dark Muted Purple for Text */
-            --color-headings: #D94A8D; /* Vibrant Pink for Headings */
-            --color-primary: #B5A2E1; /* Lavender */
-            --color-secondary: #DCE284; /* Lime Green */
-            --color-cta: #DE5D9C; /* Vibrant Pink for CTA */
-            --color-accent: #DCE284; /* Lime Green - AHORA ES EL ACENTO PRINCIPAL */
+            /* Paleta Dark Theme */
+            --color-bg: #1A1A3D; /* Deep Blue Background */
+            --color-bg-alt: #252556; /* Slightly Lighter Blue for cards/sections */
+            --color-text: #D9D9E6; /* Light Lavender Gray for body text */
+            --color-headings: #FFFFFF; /* White for main headings */
+            --color-primary: #8A89C1; /* Periwinkle for accents */
+            --color-secondary: #E5B6D5; /* Light Pink for secondary accents */
+            --color-cta: #E661B2; /* Fuchsia Pink */
+            --color-accent: #E661B2; /* Fuchsia Pink as main accent */
             
             --font-headings: 'Poppins', sans-serif;
             --font-body: 'Inter', sans-serif;
 
-            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
-            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -4px rgba(0,0,0,0.05);
-            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
-            --shadow-ring: 0 0 0 3px rgba(222, 93, 156, 0.3);
+            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.2), 0 8px 10px -6px rgba(0,0,0,0.2);
+            --shadow-ring: 0 0 0 3px rgba(230, 97, 178, 0.5);
 
             --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -101,7 +103,7 @@
 
         p { margin-bottom: 1rem; }
         a { color: var(--color-cta); text-decoration: none; transition: var(--transition-fast); }
-        a:hover { color: var(--color-headings); }
+        a:hover { color: var(--color-secondary); }
 
         img, svg, video { max-width: 100%; height: auto; display: block; }
         
@@ -113,6 +115,7 @@
 
         section {
             padding-block: clamp(3rem, 8vw, 6rem);
+            /* La línea divisoria se elimina para un look más limpio de 'bloques' de color */
         }
         
         .skip-link {
@@ -156,8 +159,8 @@
         .spinner {
             width: 50px;
             height: 50px;
-            border: 5px solid rgba(222, 93, 156, 0.2);
-            border-top-color: var(--color-cta);
+            border: 5px solid rgba(230, 97, 178, 0.2);
+            border-top-color: var(--color-accent);
             border-radius: 50%;
             animation: spin 1s ease-in-out infinite;
         }
@@ -189,20 +192,20 @@
 
         .btn-cta:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(222, 93, 156, 0.4);
-            background-color: #d94a8d;
+            box-shadow: 0 10px 20px rgba(230, 97, 178, 0.4);
+            background-color: #d958a3;
         }
         
         .btn-secondary {
             background-color: transparent;
-            color: var(--color-headings);
-            border-color: var(--color-secondary);
+            color: var(--color-secondary);
+            border-color: var(--color-primary);
         }
 
         .btn-secondary:hover {
-            background-color: var(--color-secondary);
-            border-color: var(--color-secondary);
-            color: #5E5A72;
+            background-color: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
         }
 
         .section-title {
@@ -211,7 +214,7 @@
         }
 
         .section-title span {
-            color: var(--color-accent);
+            color: var(--color-cta);
         }
         
         /* ------------------- */
@@ -228,7 +231,7 @@
         }
         
         .main-header.scrolled {
-            background-color: rgba(254, 252, 255, 0.8);
+            background-color: rgba(26, 26, 61, 0.8);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             box-shadow: var(--shadow-md);
@@ -249,7 +252,7 @@
         }
         
         .logo span {
-            color: var(--color-accent);
+            color: var(--color-cta);
         }
         
         .main-nav ul {
@@ -278,7 +281,7 @@
         }
 
         .main-nav a:hover, .main-nav a:focus {
-            color: var(--color-headings);
+            color: white;
         }
 
         .main-nav a:hover::after {
@@ -306,15 +309,6 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(240deg, var(--color-primary), var(--color-cta));
-            animation: gradient-animation 20s ease infinite;
-            background-size: 200% 200%;
-        }
-
-        @keyframes gradient-animation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
         
         .hero-content {
@@ -325,18 +319,18 @@
         }
 
         .hero-text h1, .hero-text .subtitle {
-            color: white; /* Forzar blanco para contraste con gradiente */
+            color: white; 
         }
         
         .hero-text h1 {
             margin-bottom: 1rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
         
         .hero-text .subtitle {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             max-width: 50ch;
+            color: var(--color-text);
         }
         
         .hero-image-wrapper {
@@ -350,14 +344,17 @@
             height: 350px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            box-shadow: var(--shadow-lg);
+            border: 5px solid var(--color-bg-alt);
+            box-shadow: 0 0 40px rgba(230, 97, 178, 0.3);
         }
 
 
         /* ------------------- */
         /* ABOUT SECTION       */
         /* ------------------- */
+        #about {
+            background-color: var(--color-bg-alt);
+        }
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -388,10 +385,10 @@
         }
 
         .service-card {
-            background-color: #FFFFFF;
+            background-color: var(--color-bg-alt);
             padding: 2rem;
             border-radius: 1rem;
-            border: 1px solid #F5EEF3;
+            border: 1px solid #3c3c7a;
             transition: var(--transition-fast);
             opacity: 0;
             transform: translateY(50px);
@@ -401,13 +398,14 @@
             transform: translateY(-10px) scale(1.03);
             box-shadow: var(--shadow-lg);
             border-color: var(--color-primary);
+            background-color: #303067;
         }
 
         .service-card .icon {
             width: 50px;
             height: 50px;
             margin-bottom: 1rem;
-            color: var(--color-accent);
+            color: var(--color-cta);
         }
 
 
@@ -415,7 +413,7 @@
         /* BENEFITS SECTION    */
         /* ------------------- */
         #benefits {
-            background-color: #F8F9E9; /* Tono amarillo pastel para el fondo */
+            background-color: var(--color-bg-alt);
         }
         .benefits-grid {
             display: grid;
@@ -440,8 +438,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
-            box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-primary);
+            background: linear-gradient(135deg, var(--color-cta), var(--color-primary));
+            box-shadow: 0 0 0 4px var(--color-bg-alt), 0 0 0 6px var(--color-primary);
             transition: var(--transition-fast);
             animation: gentle-rotate 15s linear infinite;
         }
@@ -453,7 +451,7 @@
 
         .benefit-item:hover .benefit-icon-wrapper {
             transform: scale(1.1);
-            box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-cta), var(--shadow-lg);
+            box-shadow: 0 0 0 4px var(--color-bg-alt), 0 0 0 6px var(--color-cta), var(--shadow-lg);
             animation-play-state: paused;
         }
 
@@ -474,7 +472,7 @@
             text-align: center;
         }
         #booking .container {
-            background: linear-gradient(90deg, var(--color-cta), var(--color-accent));
+            background: linear-gradient(90deg, var(--color-cta), #2934A3);
             padding: 4rem 2rem;
             border-radius: 1rem;
         }
@@ -489,11 +487,17 @@
         /* ------------------- */
         /* TESTIMONIALS        */
         /* ------------------- */
+        #testimonials {
+            background-color: var(--color-bg-alt);
+        }
         .testimonial-slider {
             position: relative;
             max-width: 800px;
             margin: auto;
             overflow: hidden;
+            background-color: var(--color-bg);
+            border-radius: 1rem;
+            padding-block: 1rem;
         }
         
         .testimonial-track {
@@ -526,7 +530,7 @@
 
         .slider-btn {
             background: none;
-            border: 2px solid var(--color-secondary); /* Borde amarillo para los botones */
+            border: 2px solid var(--color-primary);
             color: var(--color-text);
             width: 40px;
             height: 40px;
@@ -570,9 +574,9 @@
         }
         
         .workshop-card {
-            background-color: #FFFFFF;
+            background-color: var(--color-bg-alt);
             border-radius: 1rem;
-            border: 1px solid #F5EEF3;
+            border: 1px solid #3c3c7a;
             overflow: hidden;
             transition: var(--transition-fast);
             opacity: 0;
@@ -589,7 +593,7 @@
         
         .workshop-image {
             height: 200px;
-            background-color: var(--color-secondary); /* Placeholder */
+            background-color: var(--color-primary); /* Placeholder */
         }
 
         .workshop-content {
@@ -610,6 +614,9 @@
         /* ------------------- */
         /* FAQ                 */
         /* ------------------- */
+        #faq {
+            background-color: var(--color-bg-alt);
+        }
         .faq-container {
             max-width: 750px;
             margin: auto;
@@ -619,10 +626,10 @@
         }
 
         .faq-item {
-            border: 1px solid #F5EEF3;
+            border: 1px solid #3c3c7a;
             border-radius: 0.5rem;
             overflow: hidden;
-            background-color: #FFFFFF;
+            background-color: var(--color-bg);
         }
 
         .faq-item summary {
@@ -656,7 +663,7 @@
 
         .faq-item > div {
             padding: 0 1.5rem 1.5rem;
-            border-top: 1px solid #F5EEF3;
+            border-top: 1px solid #3c3c7a;
         }
         
         /* ------------------- */
@@ -681,7 +688,7 @@
             gap: 1rem;
         }
         .contact-info svg {
-            color: var(--color-accent);
+            color: var(--color-cta);
         }
 
         #contact-form input,
@@ -691,7 +698,7 @@
             margin-bottom: 1rem;
             border-radius: 0.5rem;
             border: 1px solid var(--color-primary);
-            background-color: #FFFFFF;
+            background-color: var(--color-bg-alt);
             color: var(--color-text);
         }
         
@@ -716,6 +723,7 @@
             width: 100%;
             height: 100%;
             border: 0;
+            filter: invert(90%) grayscale(60%);
         }
 
 
@@ -725,7 +733,7 @@
         .main-footer {
             padding: 2rem 0;
             text-align: center;
-            border-top: 1px solid #F5EEF3;
+            background-color: var(--color-bg-alt);
         }
 
         /* ------------------- */
@@ -781,15 +789,83 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(254, 252, 255, 0.8);
+            background-color: rgba(26, 26, 61, 0.8);
             backdrop-filter: blur(5px);
             padding: 1rem;
             z-index: 999;
-            border-top: 1px solid #F5EEF3;
+            border-top: 1px solid var(--color-bg-alt);
         }
 
         .mobile-sticky-cta .btn {
             width: 100%;
+        }
+        
+        /* ------------------- */
+        /* BOOKING MODAL       */
+        /* ------------------- */
+        .booking-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .booking-modal.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .booking-modal-content {
+            background-color: var(--color-bg);
+            border-radius: 1rem;
+            padding: 1rem;
+            position: relative;
+            width: 90%;
+            max-width: 850px;
+            height: 90%;
+            max-height: 700px;
+            box-shadow: var(--shadow-lg);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .booking-modal.is-active .booking-modal-content {
+            transform: scale(1);
+        }
+
+        .close-modal-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--color-headings);
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 1;
+        }
+
+        .booking-modal-body {
+            width: 100%;
+            height: 100%;
+            padding-top: 30px; /* Space for close button */
+        }
+
+        .booking-modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0.5rem;
         }
 
 
@@ -817,7 +893,7 @@
                 width: 80%;
                 max-width: 320px;
                 height: 100vh;
-                background-color: #FFFFFF;
+                background-color: var(--color-bg-alt);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -898,7 +974,7 @@
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn btn-cta header-cta data-whatsapp-link" target="_blank" rel="noopener noreferrer">Pedir Turno</a>
+            <a href="#" class="btn btn-cta header-cta js-open-booking-modal">Pedir Turno</a>
             <button class="mobile-menu-toggle" aria-label="Abrir menú">☰</button>
         </div>
     </header>
@@ -912,7 +988,7 @@
                     <div class="hero-text">
                         <h1 class="data-hero-title"></h1>
                         <p class="subtitle data-hero-subtitle"></p>
-                        <a href="#" class="btn btn-cta data-whatsapp-link" target="_blank" rel="noopener noreferrer">Pedir Turno</a>
+                        <a href="#" class="btn btn-cta js-open-booking-modal">Pedir Turno</a>
                     </div>
                     <div class="hero-image-wrapper">
                         <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758042883/Captura_de_pantalla_2025-09-16_141426_h0s1rp.png" alt="Lic. Carolina Nista" class="hero-avatar">
@@ -1008,7 +1084,7 @@
             <div class="container">
                 <h2>¿Listo para empezar tu proceso de cambio?</h2>
                 <p>El primer paso es el más importante. Hacé clic para reservar tu turno y empecemos a trabajar juntos.</p>
-                <a href="#" class="btn btn-cta data-whatsapp-link" target="_blank" rel="noopener noreferrer">Pedir Turno por WhatsApp</a>
+                <a href="#" class="btn btn-cta js-open-booking-modal">Pedir Turno por WhatsApp</a>
             </div>
         </section>
 
@@ -1127,11 +1203,11 @@
                         <p>Podés contactarme por WhatsApp para una respuesta más rápida, o usar el formulario. ¡Espero tu mensaje!</p>
                         <ul>
                             <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.98z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.98z"></path></svg>
                                 <a href="#" class="data-phone-href" id="contact-phone"></a>
                             </li>
                              <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 <span id="contact-address"></span>
                             </li>
                         </ul>
@@ -1146,7 +1222,7 @@
                     </div>
                     <div class="map-container">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.431268393527!2d-58.56323758477418!3d-34.46671098049539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1e7e40854c1%3A0x6b42b6479577f83f!2sSarmiento%201194%2C%20B1646%20San%20Fernando%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1668529881881!5m2!1ses-419!2sar" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.431268393527!2d-58.56323758477418!3d-34.46671098049539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1e7e40854c1%3A0x6b42b6479577f83f!2sSarmiento%201194%2C%2B1646%20San%20Fernando%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1668529881881!5m2!1ses-419!2sar" 
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Mapa de ubicación del consultorio">
                         </iframe>
@@ -1166,7 +1242,7 @@
     
     <!-- ============== MOBILE STICKY CTA ============== -->
     <div class="mobile-sticky-cta">
-        <a href="#" class="btn btn-cta data-whatsapp-link" target="_blank" rel="noopener noreferrer">Pedir Turno por WhatsApp</a>
+        <a href="#" class="btn btn-cta js-open-booking-modal">Pedir Turno</a>
     </div>
 
     <!-- ============== FLOATING SOCIAL BAR ============== -->
@@ -1178,6 +1254,17 @@
             <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12.04 3.6c4.54 0 8.23 3.69 8.23 8.23s-3.69 8.23-8.23 8.23c-1.52 0-2.98-.41-4.28-1.15l-.3-.18-3.18.83.85-3.1-.2-.31c-.82-1.32-1.26-2.83-1.26-4.38 0-4.54 3.69-8.23 8.23-8.23zm-1.8 4.39c-.19-.09-.4-.09-.58.09-.18.18-.7.68-.85.83-.15.15-.3.18-.44.09-.15-.09-1.2-.44-2.28-1.4-.85-.75-1.42-1.68-1.65-1.97-.22-.29-.01-.45.09-.58.09-.1.19-.27.28-.37.09-.1.12-.18.18-.32.05-.15-.02-.28-.09-.37s-.44-1.06-.6-1.45c-.16-.39-.32-.33-.44-.33h-.2c-.15 0-.37.09-.55.28s-.7.68-.7 1.67c0 1 .73 1.94.83 2.08.1.15 1.42 2.18 3.43 3.06 2.01.88 2.01.59 2.37.55.36-.04 1.2-.49 1.37-.96.17-.47.17-.88.12-.96-.05-.08-.18-.13-.37-.22z"/></svg>
         </a>
     </div>
+
+    <!-- ============== BOOKING MODAL ============== -->
+    <div id="booking-modal" class="booking-modal">
+        <div class="booking-modal-content">
+            <button class="close-modal-btn" aria-label="Cerrar ventana de turnos">&times;</button>
+            <div class="booking-modal-body">
+                <!-- iframe de AgendaPro se cargará aquí -->
+            </div>
+        </div>
+    </div>
+
 
     <!-- ============== SCRIPTS ============== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -1236,6 +1323,8 @@
                 
                 document.querySelector('.data-hero-title').textContent = content.heroTitle;
                 document.querySelector('.data-hero-subtitle').textContent = content.heroSubtitle;
+                
+                // Solo los íconos flotantes usan el link de WhatsApp ahora
                 document.querySelectorAll('.data-whatsapp-link').forEach(el => el.href = content.whatsappLink);
                 
                 const instagramLinkEl = document.querySelector('.data-instagram-link');
@@ -1420,6 +1509,58 @@
                     });
                 });
             }
+
+            // ===================================================
+            // 9. BOOKING MODAL
+            // ===================================================
+            function setupBookingModal() {
+                const openModalButtons = document.querySelectorAll('.js-open-booking-modal');
+                const modal = document.getElementById('booking-modal');
+                const closeModalButton = document.querySelector('.close-modal-btn');
+                const modalBody = document.querySelector('.booking-modal-body');
+
+                if (!modal || openModalButtons.length === 0) return;
+
+                const iframeSrc = "https://agendapro.com/iframe/overview/20fa1b8f-941c-4e6e-b232-ed485bd9b819";
+
+                const openModal = () => {
+                    if (modalBody.innerHTML.trim() === '') {
+                        const iframe = document.createElement('iframe');
+                        iframe.src = iframeSrc;
+                        iframe.title = "Sistema de agendamiento de turnos";
+                        modalBody.appendChild(iframe);
+                    }
+                    modal.classList.add('is-active');
+                    document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+                };
+
+                const closeModal = () => {
+                    modal.classList.remove('is-active');
+                    document.body.style.overflow = ''; // Restaura el scroll del fondo
+                    modalBody.innerHTML = ''; // Elimina el iframe para detenerlo
+                };
+
+                openModalButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        openModal();
+                    });
+                });
+
+                closeModalButton.addEventListener('click', closeModal);
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+                        closeModal();
+                    }
+                });
+            }
             
             // ===================================================
             // INICIALIZACIÓN
@@ -1431,10 +1572,12 @@
             initAnimations();
             handleContactForm();
             setupMobileMenu();
+            setupBookingModal();
         });
     </script>
 </body>
 </html>
+
 
 
 
